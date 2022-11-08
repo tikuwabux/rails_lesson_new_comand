@@ -70,11 +70,13 @@ Rails.application.configure do
   ]
   
   # blocked host エラー解消のため追加したコード１−２
-  #config.hosts << "32be676609f844ffae780b5cb13bb51a.vfs.cloud9.ap-northeast-1.amazonaws.com"
-  #=> 効果なし
+   config.hosts << "32be676609f844ffae780b5cb13bb51a.vfs.cloud9.ap-northeast-1.amazonaws.com"
+  #=> 効果なし｡ボツ｡
+  #=> rails s 再起動したら効果ありだった!ボツ取り消し｡
   
   # blocked host エラー解消のため追加したコード2
   #config.hosts.clear
-  #=> 効果なし
+  #=> 効果なし｡ボツ｡
+  #=> rails s 再起動したら効果ありだった! ボツ取り消し｡
   
 end

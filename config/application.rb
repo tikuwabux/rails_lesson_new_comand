@@ -17,6 +17,8 @@ module Myapp
     # the framework and any gems in your application.
     
     # blocked host エラー解消のため追加したコード3
-    onfig.middleware.delete ActionDispatch::HostAuthorization
+    #config.middleware.delete ActionDispatch::HostAuthorization
+    # => rails s 再起動時､エラーが発生したためボツ
+    # =>文頭をonfigからcocfigに変更したらできた! ボツ取り消し｡
   end
 end
