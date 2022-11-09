@@ -32,10 +32,20 @@
         <td><%= user.created_at.to_s(:datetime_jp) %></td>
         
         <%# ユーザー詳細ページへのリンクを作成%>
-        <%# なぜ:userじゃくて､userなのだろうか%>
+        <%# なぜ:userじゃくて､userなのだろうか｡｡
+             →rails routes のprefix が user <=> users#show だから?%>
         <td>
           <%= link_to "参照", user %>
         </td>
+        
+        <%# ユーザー編集ページへのリンクを作成%>
+        <%# 相変わらずlint_toメソッドの文法がよくわからない %>
+        <%# rails routes のprefic が edit_user <=> users#editだから､
+            [:edit, user] なのか? %>
+        <td>
+          <%= link_to "編集", [:edit, user]%>
+        </td>
+        
       </tr>
     <% end %>
   </tbody>
