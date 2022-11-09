@@ -1,0 +1,38 @@
+<h3>ユーザー情報一覧</h3>
+
+<% if flash[:notice] %>
+  <p class="notice"><%= flash[:notice] %></p>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>名前</th>
+      <th>メールアドレス</th>
+      <th>年齢</th>
+      <th>一言紹介</th>
+      <th>更新日</th>
+      <th>作成日</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.age %></td>
+        <td><%= user.introduction %></td>
+        <%# to_s(:datetime_jp)は/config/initializers/time_formats.rb 中で定義 %>
+        <%# これつけないと､標準時との時差とか余計なものが表示されて邪魔になる 
+        %>
+        <td><%= user.updated_at.to_s(:datetime_jp) %></td>
+        <td><%= user.created_at.to_s(:datetime_jp) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><%= link_to"ユーザー新規登録", :new_user %></p>

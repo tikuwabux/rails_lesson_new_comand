@@ -20,5 +20,9 @@ module Myapp
     #config.middleware.delete ActionDispatch::HostAuthorization
     # => rails s 再起動時､エラーが発生したためボツ
     # =>文頭をonfigからcocfigに変更したらできた! ボツ取り消し｡
+    
+    # CRUD処理/Create で追加
+    #config.action_controller.permit_all_parameters = true
+    config.time_zone = 'Tokyo'
   end
 end

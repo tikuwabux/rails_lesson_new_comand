@@ -1,0 +1,39 @@
+header {
+   width: 100%;
+   padding: 15px;
+   margin-bottom: 30px;
+   border-bottom: 7px solid orange;
+ }
+ 
+ footer{
+   width: 100%;
+   padding: 15px;
+   margin-top: 30px;
+   border-top: 7px solid orange;
+ }
+ 
+ .partial {
+   border: 1px solid red;
+   padding: 15px;
+ }
+ 
+ /*CRUD処理/Create*/
+ 
+/*table header(見出し)の色つけ*/
+ table th {
+    background-color: #fbc25b;
+    padding: 10px 20px;
+ }
+ 
+ /*table data(データ)の色つけ*/
+ table td {
+    background-color: #f9ecd5;
+    padding: 10px 20px;
+ }
+ 
+ /*noticeってなんだ? 不明*/
+ .notice {
+    background-color: #ccf;
+    padding: 5px;
+ }
+ 
