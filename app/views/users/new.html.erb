@@ -1,14 +1,19 @@
 <h3>ユーザー新規作成</h3>
 
-<%#
+<!--パーシャルの読み込み｡
+パーシャル中で参照可能な変数objにインスタンス変数@userを格納-->
+<%= render "shared/error", obj: @user %> 
 
-form_with model: モデルオブジェクト do |f| 
-フォームの中身
-end
 
-でフォームを簡単に作成できる｡
-%>
-<%= form_with model: @user do |f| %>
+<!-- 上に加え､下にlocal: true を追加することで､validateエラー時のメッセが表示されるようになった!-->
+
+<!-- form_with model: モデルオブジェクト do |f| 
+      フォームの中身
+     end
+
+でフォームを簡単に作成できる｡ -->
+
+<%= form_with model: @user, local: true do |f| %>
   <table>
     <tr>
       <%# フォームのラベルを作成｡name属性=user[name]｡表記は"名前"とする %>
