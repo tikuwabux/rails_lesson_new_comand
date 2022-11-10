@@ -6,8 +6,10 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%#エラーが発生するので､消去 
-    <%=# javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <%#Webpacker::Manifest::MissingEntryErrorが発生するので､消去 %>
+    <%# 消去CRUD/Deleteまで消去してたけど､これがないlink_toメソッドの第3引数が読み込まれない%>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
