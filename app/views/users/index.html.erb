@@ -46,6 +46,16 @@
           <%= link_to "編集", [:edit, user]%>
         </td>
         
+        <%# ユーザー削除リンクを作成 %>
+        <%# 第2引数の user は､ ユーザー詳細ページのときと同じく､ rails routes のprefix が user <=> users#destroy だからか? %>
+        <%# 第3引数は､HTTPメソッドがgetメソッドのとき以外は､省略不可 %>
+        <%# 第4引数は､必須ではない｡これをつけることで､確認のアラートを表示することができる %>
+        
+        <td>
+          <%= link_to "削除", user, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+        </td>
+      
+        
       </tr>
     <% end %>
   </tbody>
