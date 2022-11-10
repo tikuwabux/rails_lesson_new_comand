@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #get 'posts/index'
   #get 'users/index'
   #get 'lessons/hello', to: 'lessons#hello'
   #get 'lessons/call', to: 'lessons#call'
@@ -6,4 +7,7 @@ Rails.application.routes.draw do
   
   #usersコントローラーのルーティングを設定する
   resources :users
+  
+  #postsコントローラーのルーティングを設定する
+  resources :posts
 end

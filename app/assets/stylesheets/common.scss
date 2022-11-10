@@ -31,9 +31,15 @@ header {
     padding: 10px 20px;
  }
  
- /*noticeってなんだ? 不明*/
+ /*フラッシュ時の文字のデザイン*/
  .notice {
     background-color: #ccf;
     padding: 5px;
  }
  
+ 
+ /*投稿フォームをでかくする*/
+ .posts-content {
+   width: 350px;
+   height: 200px;
+ }

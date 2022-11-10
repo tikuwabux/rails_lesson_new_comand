@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   def index
     #Userモデル(usersテーブル)のレコードをすべて取得し､変数に代入
     @users = User.all
+    #has_many :postsでpostモデルと紐付けあと､postモデルのレコードをすべて取得し､変数に代入
+    @posts = Post.all
   end
   
   # ここより下の各アクションを追加しましょう
@@ -27,6 +29,9 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    
+    @post = Post.new
+    @posts = @user.posts #has_many :posts でリレーションしてるからこそこう記述できる
   end
   
   def edit
