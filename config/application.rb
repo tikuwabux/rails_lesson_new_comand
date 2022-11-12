@@ -22,7 +22,11 @@ module Myapp
     # =>文頭をonfigからcocfigに変更したらできた! ボツ取り消し｡
     
     # CRUD処理/Create で追加
-    #config.action_controller.permit_all_parameters = true
+    config.action_controller.permit_all_parameters = true
     config.time_zone = 'Tokyo'
+    
+    # I18n 国際化で追加
+    #config.i18n.default_locate = :ja =>スペルミスでサーバー立ち上げ時に
+    config.i18n.default_locale = :ja
   end
 end
