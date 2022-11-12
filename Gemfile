@@ -34,6 +34,12 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  
+  # ポテパン Gem で追加
+  gem 'rspec-rails'
+  
+  # RSpec/環境構築 で追加｡ テストデータ作成に使用するGem
+  gem 'factory_bot_rails'
 end
 
 group :development do
